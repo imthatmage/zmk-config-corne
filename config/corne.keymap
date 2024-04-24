@@ -5,6 +5,7 @@
  */
 
 #include <behaviors.dtsi>
+#include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
 
 / {
@@ -19,10 +20,10 @@
             //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
 
             bindings = <
-&trans  &kp Q  &kp W  &kp E   &kp R      &kp T        &kp Y           &kp U  &kp I      &kp O    &kp P     &kp LBKT
-&trans  &kp A  &kp S  &kp D   &kp F      &kp G        &kp H           &kp J  &kp K      &kp L    &kp SEMI  &kp SQT
-&trans  &kp Z  &kp X  &kp C   &kp V      &kp B        &kp N           &kp M  &kp COMMA  &kp DOT  &kp FSLH  &kp RBKT
-                      &trans  &kp SPACE  &sk LCTRL    &sk LEFT_SHIFT  &to 1  &trans
+&trans  &kp Q  &kp W  &kp E             &kp R      &kp T        &kp Y           &kp U  &kp I      &kp O    &kp P     &kp LBKT
+&trans  &kp A  &kp S  &kp D             &kp F      &kp G        &kp H           &kp J  &kp K      &kp L    &kp SEMI  &kp SQT
+&trans  &kp Z  &kp X  &kp C             &kp V      &kp B        &kp N           &kp M  &kp COMMA  &kp DOT  &kp FSLH  &kp RBKT
+                      &kp LS(LEFT_ALT)  &kp SPACE  &sk LCTRL    &sk LEFT_SHIFT  &to 1  &trans
             >;
         };
 
@@ -46,10 +47,10 @@
 
         layer_3 {
             bindings = <
-&trans       &kp ESC  &kp C_PAUSE  &kp C_PREVIOUS        &kp C_NEXT            &kp UNDERSCORE    &kp MINUS       &kp N7  &kp N8  &kp N9  &kp BSPC  &trans
-&trans       &kp TAB  &trans       &kp C_VOLUME_DOWN     &kp C_VOLUME_UP       &kp PLUS          &kp EQUAL       &kp N4  &kp N5  &kp N6  &kp RET   &trans
-&kp C_RESET  &trans   &kp PERIOD   &kp C_BRIGHTNESS_DEC  &kp C_BRIGHTNESS_INC  &kp ASTERISK      &kp N0          &kp N1  &kp N2  &kp N3  &to 2     &trans
-                                   &trans                &to 0                 &sk LEFT_GUI      &sk LEFT_SHIFT  &to 1   &trans
+&bt BT_SEL 0  &kp ESC     &kp C_PAUSE  &kp C_PREVIOUS        &kp C_NEXT            &kp UNDERSCORE    &kp MINUS       &kp N7  &kp N8  &kp N9  &kp BSPC  &kp C_RESET
+&bt BT_SEL 1  &kp TAB     &trans       &kp C_VOLUME_DOWN     &kp C_VOLUME_UP       &kp PLUS          &kp EQUAL       &kp N4  &kp N5  &kp N6  &kp RET   &trans
+&bt BT_SEL 2  &bt BT_CLR  &kp PERIOD   &kp C_BRIGHTNESS_DEC  &kp C_BRIGHTNESS_INC  &kp ASTERISK      &kp N0          &kp N1  &kp N2  &kp N3  &to 2     &trans
+                                       &trans                &to 0                 &sk LEFT_GUI      &sk LEFT_SHIFT  &to 1   &trans
             >;
         };
     };
