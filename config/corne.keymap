@@ -32,7 +32,7 @@
 &trans  &kp ESCAPE  &kp AT_SIGN  &kp HASH        &kp DOLLAR        &kp PERCENT             &kp CARET              &kp AMPERSAND      &kp ASTERISK  &kp SEMICOLON  &kp BACKSPACE  &trans
 &trans  &kp TAB     &kp GRAVE    &kp EQUAL       &kp LEFT_BRACKET  &kp LEFT_PARENTHESIS    &kp RIGHT_PARENTHESIS  &kp RIGHT_BRACKET  &kp PLUS      &kp PIPE       &kp ENTER      &trans
 &trans  &kp TILDE   &trans       &kp UNDERSCORE  &kp SQT           &kp LEFT_BRACE          &kp RIGHT_BRACE        &kp DOUBLE_QUOTES  &kp MINUS     &kp BACKSLASH  &to 2          &trans
-                                 &trans          &to 0             &sk RCTRL               &sk LEFT_SHIFT         &to 3              &trans
+                                 &trans          &to 0             &sk RCTRL               &sk LEFT_ALT           &to 3              &trans
             >;
         };
 
