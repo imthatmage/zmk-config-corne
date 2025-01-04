@@ -14,22 +14,22 @@
 
         enter {
             bindings = <&kp ENTER>;
-            key-positions = <19 20>;
+            key-positions = <33 32>;
         };
 
         esc {
             bindings = <&kp ESCAPE>;
-            key-positions = <16 15>;
+            key-positions = <2 3>;
         };
 
         tab {
             bindings = <&kp TAB>;
-            key-positions = <15 14>;
+            key-positions = <26 27>;
         };
 
         del {
             bindings = <&kp DELETE>;
-            key-positions = <20 21>;
+            key-positions = <9 8>;
         };
     };
 
@@ -44,23 +44,32 @@
             //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
 
             bindings = <
-&trans  &kp Q  &kp W  &kp E                 &kp R      &kp T       &kp Y           &kp U  &kp I          &kp O    &kp P     &kp LBKT
-&trans  &kp A  &kp S  &kp D                 &kp F      &kp G       &kp H           &kp J  &kp K          &kp L    &kp SEMI  &kp SQT
-&trans  &kp Z  &kp X  &kp C                 &kp V      &kp B       &kp N           &kp M  &kp COMMA      &kp DOT  &kp FSLH  &kp RBKT
-                      &kp LC(LS(LEFT_ALT))  &kp SPACE  &sk LCMD    &sk LEFT_SHIFT  &to 1  &kp RIGHT_ALT
+&trans            &kp Q  &kp W  &kp E         &kp R      &kp T       &kp Y           &kp U  &kp I      &kp O    &kp P     &kp LBKT
+&sk LEFT_CONTROL  &kp A  &kp S  &kp D         &kp F      &kp G       &kp H           &kp J  &kp K      &kp L    &kp SEMI  &kp SQT
+&trans            &kp Z  &kp X  &kp C         &kp V      &kp B       &kp N           &kp M  &kp COMMA  &kp DOT  &kp FSLH  &kp RBKT
+                                &sk LEFT_ALT  &kp SPACE  &sk LCMD    &sk LEFT_SHIFT  &to 1  &to 4
             >;
         };
 
-        layer_1 {
+        sym {
             bindings = <
 &trans  &kp ESCAPE  &kp AT_SIGN  &kp HASH        &kp DOLLAR        &kp PERCENT             &kp CARET              &kp AMPERSAND      &kp ASTERISK  &kp SEMICOLON  &kp BACKSPACE  &trans
 &trans  &kp TAB     &kp GRAVE    &kp EQUAL       &kp LEFT_BRACKET  &kp LEFT_PARENTHESIS    &kp RIGHT_PARENTHESIS  &kp RIGHT_BRACKET  &kp PLUS      &kp PIPE       &kp ENTER      &trans
-&trans  &kp TILDE   &trans       &kp UNDERSCORE  &kp SQT           &kp LEFT_BRACE          &kp RIGHT_BRACE        &kp DOUBLE_QUOTES  &kp MINUS     &kp BACKSLASH  &to 2          &trans
-                                 &trans          &to 0             &trans                  &trans                 &to 3              &trans
+&trans  &kp TILDE   &trans       &kp UNDERSCORE  &kp SQT           &kp LEFT_BRACE          &kp RIGHT_BRACE        &kp DOUBLE_QUOTES  &kp MINUS     &kp BACKSLASH  &to 3          &trans
+                                 &trans          &to 0             &trans                  &trans                 &to 2              &trans
             >;
         };
 
-        layer_2 {
+        num {
+            bindings = <
+&bt BT_SEL 0  &kp ESC     &kp C_PAUSE  &kp C_PREVIOUS        &kp C_NEXT            &kp UNDERSCORE    &kp MINUS       &kp N7  &kp N8  &kp N9  &kp BSPC  &kp C_RESET
+&bt BT_SEL 1  &kp TAB     &trans       &kp C_VOLUME_DOWN     &kp C_VOLUME_UP       &kp PLUS          &kp EQUAL       &kp N4  &kp N5  &kp N6  &kp RET   &trans
+&bt BT_SEL 2  &bt BT_CLR  &kp PERIOD   &kp C_BRIGHTNESS_DEC  &kp C_BRIGHTNESS_INC  &kp ASTERISK      &kp N0          &kp N1  &kp N2  &kp N3  &to 3     &trans
+                                       &trans                &to 0                 &sk LEFT_ALT      &sk LEFT_SHIFT  &to 1   &trans
+            >;
+        };
+
+        func {
             bindings = <
 &trans  &kp ESC  &kp F1  &kp F2   &kp F3   &kp F4              &trans    &trans    &trans  &trans     &kp BSPC  &trans
 &trans  &kp TAB  &kp F5  &kp F6   &kp F7   &kp F8              &kp LEFT  &kp DOWN  &kp UP  &kp RIGHT  &kp RET   &trans
@@ -68,13 +77,12 @@
                          &trans   &to 0    &kp LEFT_COMMAND    &trans    &to 1     &trans
             >;
         };
-
-        layer_3 {
+        win_nav {
             bindings = <
-&bt BT_SEL 0  &kp ESC     &kp C_PAUSE  &kp C_PREVIOUS        &kp C_NEXT            &kp UNDERSCORE    &kp MINUS       &kp N7  &kp N8  &kp N9  &kp BSPC  &kp C_RESET
-&bt BT_SEL 1  &kp TAB     &trans       &kp C_VOLUME_DOWN     &kp C_VOLUME_UP       &kp PLUS          &kp EQUAL       &kp N4  &kp N5  &kp N6  &kp RET   &trans
-&bt BT_SEL 2  &bt BT_CLR  &kp PERIOD   &kp C_BRIGHTNESS_DEC  &kp C_BRIGHTNESS_INC  &kp ASTERISK      &kp N0          &kp N1  &kp N2  &kp N3  &to 3     &trans
-                                       &trans                &to 0                 &sk LEFT_GUI      &sk LEFT_SHIFT  &to 1   &trans
+&trans  &trans  &kp LA(NUMBER_7)  &kp LA(NUMBER_8)  &kp LA(NUMBER_9)  &trans              &trans          &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &kp LA(NUMBER_4)  &kp LA(NUMBER_5)  &kp LA(NUMBER_6)  &trans              &trans          &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &kp LA(NUMBER_1)  &kp LA(NUMBER_2)  &kp LA(NUMBER_3)  &kp LA(NUMBER_0)    &trans          &trans  &trans  &trans  &trans  &trans
+                                  &trans            &to 0             &trans              &sk LEFT_SHIFT  &trans  &trans
             >;
         };
     };
