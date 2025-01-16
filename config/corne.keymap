@@ -27,9 +27,14 @@
             key-positions = <26 27>;
         };
 
-        del {
-            bindings = <&kp DELETE>;
+        back {
+            bindings = <&kp BACKSPACE>;
             key-positions = <9 8>;
+        };
+
+        delete {
+            bindings = <&kp DELETE>;
+            key-positions = <9 10>;
         };
     };
 
@@ -47,8 +52,8 @@
 
         sym1 {
             bindings = <
-&trans  &kp ESCAPE  &kp UNDERSCORE  &kp UP           &kp PLUS   &kp LBKT                &kp RBKT               &kp N7  &kp N8  &kp N9  &kp PAGE_UP    &trans
-&trans  &kp TAB     &kp LEFT        &kp DOWN         &kp RIGHT  &kp LEFT_PARENTHESIS    &kp RIGHT_PARENTHESIS  &kp N4  &kp N5  &kp N6  &kp PAGE_DOWN  &trans
+&trans  &kp ESCAPE  &kp UNDERSCORE  &kp UP           &kp PLUS   &kp LBKT                &kp RBKT               &kp N7  &kp N8  &kp N9  &trans         &kp PAGE_UP
+&trans  &kp TAB     &kp LEFT        &kp DOWN         &kp RIGHT  &kp LEFT_PARENTHESIS    &kp RIGHT_PARENTHESIS  &kp N4  &kp N5  &kp N6  &kp BACKSPACE  &kp PAGE_DOWN
 &trans  &kp TILDE   &kp MINUS       &kp KP_MULTIPLY  &kp EQUAL  &kp LEFT_BRACE          &kp RIGHT_BRACE        &kp N1  &kp N2  &kp N3  &to 3          &trans
                                     &kp COMMA        &to 0      &kp SPACE               &kp DOT                &to 2   &kp N0
             >;
@@ -56,10 +61,10 @@
 
         sym2 {
             bindings = <
-&trans  &kp EXCL  &kp AT  &kp HASH  &kp DOLLAR  &kp PRCNT    &kp CARET  &kp AMPS  &kp ASTRK  &kp APOSTROPHE  &kp DOUBLE_QUOTES  &trans
-&trans  &trans    &trans  &trans    &trans      &trans       &trans     &trans    &trans     &trans          &trans             &trans
-&trans  &trans    &trans  &trans    &trans      &trans       &trans     &trans    &trans     &trans          &trans             &trans
-                          &trans    &to 0       &trans       &trans     &trans    &trans
+&trans  &kp EXCL  &kp AT  &kp HASH  &kp DOLLAR  &kp PRCNT        &kp CARET         &kp AMPS  &kp ASTRK  &kp APOSTROPHE  &kp DOUBLE_QUOTES  &trans
+&trans  &trans    &trans  &trans    &kp EQUAL   &kp LESS_THAN    &kp GREATER_THAN  &trans    &trans     &trans          &trans             &trans
+&trans  &trans    &trans  &trans    &trans      &trans           &trans            &trans    &trans     &trans          &trans             &trans
+                          &trans    &to 0       &trans           &trans            &trans    &trans
             >;
         };
 
@@ -71,6 +76,7 @@
                                        &trans                &to 0                 &sk LEFT_ALT    &sk LEFT_SHIFT  &to 2    &trans
             >;
         };
+
         win_nav {
             bindings = <
 &trans  &trans  &kp LA(NUMBER_7)  &kp LA(NUMBER_8)  &kp LA(NUMBER_9)  &trans    &trans          &trans  &trans  &trans  &trans  &trans
